@@ -1,4 +1,4 @@
-module iznik-server-go
+module booktastic-server-go
 
 go 1.19
 
