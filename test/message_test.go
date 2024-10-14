@@ -3,9 +3,9 @@ package test
 import (
 	json2 "encoding/json"
 	"fmt"
-	"github.com/freegle/iznik-server-go/group"
-	"github.com/freegle/iznik-server-go/message"
-	user2 "github.com/freegle/iznik-server-go/user"
+	"github.com/freegle/booktastic-server-go/group"
+	"github.com/freegle/booktastic-server-go/message"
+	user2 "github.com/freegle/booktastic-server-go/user"
 	"github.com/stretchr/testify/assert"
 	"net/http/httptest"
 	"testing"

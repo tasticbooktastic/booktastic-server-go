@@ -2,8 +2,8 @@ package story
 
 import (
 	"encoding/json"
-	"github.com/freegle/iznik-server-go/database"
-	"github.com/freegle/iznik-server-go/misc"
+	"github.com/freegle/booktastic-server-go/database"
+	"github.com/freegle/booktastic-server-go/misc"
 	"github.com/gofiber/fiber/v2"
 	"os"
 	"strconv"

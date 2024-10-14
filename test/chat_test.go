@@ -4,7 +4,7 @@ import (
 	"bytes"
 	json2 "encoding/json"
 	"fmt"
-	"github.com/freegle/iznik-server-go/chat"
+	"github.com/freegle/booktastic-server-go/chat"
 	"github.com/gofiber/fiber/v2"
 	"github.com/stretchr/testify/assert"
 	"net/http/httptest"

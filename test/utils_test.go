@@ -1,7 +1,7 @@
 package test
 
 import (
-	"github.com/freegle/iznik-server-go/utils"
+	"github.com/freegle/booktastic-server-go/utils"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

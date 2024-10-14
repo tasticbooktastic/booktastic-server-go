@@ -2,7 +2,7 @@ package user
 
 import (
 	"fmt"
-	"github.com/freegle/iznik-server-go/database"
+	"github.com/freegle/booktastic-server-go/database"
 	"github.com/getsentry/sentry-go"
 	"github.com/gofiber/fiber/v2"
 	"sync"

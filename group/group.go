@@ -3,7 +3,7 @@ package group
 import (
 	"encoding/json"
 	"errors"
-	"github.com/freegle/iznik-server-go/database"
+	"github.com/freegle/booktastic-server-go/database"
 	"github.com/gofiber/fiber/v2"
 	"gorm.io/gorm"
 	"os"

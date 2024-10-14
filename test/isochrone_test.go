@@ -2,8 +2,8 @@ package test
 
 import (
 	json2 "encoding/json"
-	"github.com/freegle/iznik-server-go/isochrone"
-	"github.com/freegle/iznik-server-go/message"
+	"github.com/freegle/booktastic-server-go/isochrone"
+	"github.com/freegle/booktastic-server-go/message"
 	"github.com/stretchr/testify/assert"
 	"net/http/httptest"
 	"testing"

@@ -3,7 +3,7 @@
 Booktastic is a platform for distributed local libraries.  This is the backend server; the frontend client
  is [here](https://github.com/edwh/booktastic-nuxt3).
 
-It was originally forked from [Iznik](https://github.com/freegle/iznik-server-go), which is the platform used
+It was originally forked from [Iznik](https://github.com/freegle/booktastic-server-go), which is the platform used
 by [Freegle](https://www.ilovefreegle.org) for online gifting.
 
 ## Status

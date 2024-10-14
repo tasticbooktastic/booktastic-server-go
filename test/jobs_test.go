@@ -3,7 +3,7 @@ package test
 import (
 	json2 "encoding/json"
 	"fmt"
-	"github.com/freegle/iznik-server-go/job"
+	"github.com/freegle/booktastic-server-go/job"
 	"github.com/stretchr/testify/assert"
 	"net/http/httptest"
 	"testing"

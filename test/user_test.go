@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"github.com/freegle/iznik-server-go/database"
+	"github.com/freegle/booktastic-server-go/database"
 	"github.com/stretchr/testify/assert"
 	"net/http/httptest"
 	"testing"

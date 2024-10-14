@@ -4,8 +4,8 @@ import (
 	"context"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
-	"github.com/freegle/iznik-server-go/adapter"
-	"github.com/freegle/iznik-server-go/handler"
+	"github.com/freegle/booktastic-server-go/adapter"
+	"github.com/freegle/booktastic-server-go/handler"
 	"github.com/gofiber/fiber/v2"
 	"time"
 )

@@ -2,7 +2,7 @@ package test
 
 import (
 	json2 "encoding/json"
-	newsfeed2 "github.com/freegle/iznik-server-go/newsfeed"
+	newsfeed2 "github.com/freegle/booktastic-server-go/newsfeed"
 	"github.com/stretchr/testify/assert"
 	"net/http/httptest"
 	"strconv"

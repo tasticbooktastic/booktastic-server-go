@@ -1,10 +1,10 @@
 package isochrone
 
 import (
-	"github.com/freegle/iznik-server-go/database"
-	"github.com/freegle/iznik-server-go/message"
-	"github.com/freegle/iznik-server-go/user"
-	"github.com/freegle/iznik-server-go/utils"
+	"github.com/freegle/booktastic-server-go/database"
+	"github.com/freegle/booktastic-server-go/message"
+	"github.com/freegle/booktastic-server-go/user"
+	"github.com/freegle/booktastic-server-go/utils"
 	"github.com/gofiber/fiber/v2"
 	"sync"
 )

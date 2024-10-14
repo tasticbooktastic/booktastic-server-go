@@ -1,13 +1,13 @@
 package user
 
 import (
+	"booktastic-server-go/location"
 	json2 "encoding/json"
 	"errors"
 	"fmt"
-	"github.com/freegle/iznik-server-go/database"
+	"github.com/freegle/booktastic-server-go/database"
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v4"
-	"iznik-server-go/location"
 	"os"
 	"strconv"
 	"strings"

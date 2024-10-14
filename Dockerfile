@@ -12,9 +12,9 @@ ENV MYSQL_USER=root \
     GROUP_DOMAIN=groups.freegle.test
 
 RUN apt update && apt install -y golang-go git \
-    && git clone https://github.com/Freegle/iznik-server-go.git
+    && git clone https://github.com/Freegle/booktastic-server-go.git
 
-CMD cd iznik-server-go \
+CMD cd booktastic-server-go \
   && git pull \
   && go get \
   && echo "Start against DB $MYSQL_HOST:$MYSQL_PORT/$MYSQL_DBNAME with user $MYSQL_USER password $MYSQL_PASSWORD" \

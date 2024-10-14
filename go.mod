@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/aws/aws-lambda-go v1.47.0
 	github.com/awslabs/aws-lambda-go-api-proxy v0.16.2
-	github.com/freegle/iznik-server-go v0.0.0-20240913084341-16eb75871cbb
+	github.com/freegle/booktastic-server-go v0.0.0-20240913084341-16eb75871cbb
 	github.com/getsentry/sentry-go v0.29.0
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/gofiber/fiber/v2 v2.52.5
@@ -48,4 +48,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/freegle/iznik-server-go => ./
+replace github.com/freegle/booktastic-server-go => ./

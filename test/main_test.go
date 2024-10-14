@@ -1,9 +1,9 @@
 package test
 
 import (
-	"github.com/freegle/iznik-server-go/database"
-	"github.com/freegle/iznik-server-go/router"
-	"github.com/freegle/iznik-server-go/user"
+	"github.com/freegle/booktastic-server-go/database"
+	"github.com/freegle/booktastic-server-go/router"
+	"github.com/freegle/booktastic-server-go/user"
 	"github.com/gofiber/fiber/v2"
 )
 

@@ -2,7 +2,7 @@ package database
 
 import (
 	"fmt"
-	sentrylogpackage "github.com/freegle/iznik-server-go/sentrylog"
+	sentrylogpackage "github.com/freegle/booktastic-server-go/sentrylog"
 	sql "github.com/rocketlaunchr/mysql-go"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

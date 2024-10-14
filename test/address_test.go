@@ -2,7 +2,7 @@ package test
 
 import (
 	json2 "encoding/json"
-	address2 "github.com/freegle/iznik-server-go/address"
+	address2 "github.com/freegle/booktastic-server-go/address"
 	"github.com/stretchr/testify/assert"
 	"net/http/httptest"
 	"strconv"

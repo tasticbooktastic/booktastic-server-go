@@ -1,6 +1,6 @@
 package item
 
-import "github.com/freegle/iznik-server-go/database"
+import "github.com/freegle/booktastic-server-go/database"
 
 type Item struct {
 	ID   uint64 `json:"id" gorm:"primary_key"`

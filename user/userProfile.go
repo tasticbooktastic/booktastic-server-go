@@ -2,7 +2,7 @@ package user
 
 import (
 	"encoding/json"
-	"github.com/freegle/iznik-server-go/misc"
+	"github.com/freegle/booktastic-server-go/misc"
 	"os"
 	"strconv"
 	"strings"

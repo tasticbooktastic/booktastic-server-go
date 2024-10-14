@@ -2,9 +2,9 @@ package volunteering
 
 import (
 	"errors"
-	"github.com/freegle/iznik-server-go/database"
-	"github.com/freegle/iznik-server-go/misc"
-	"github.com/freegle/iznik-server-go/user"
+	"github.com/freegle/booktastic-server-go/database"
+	"github.com/freegle/booktastic-server-go/misc"
+	"github.com/freegle/booktastic-server-go/user"
 	"github.com/gofiber/fiber/v2"
 	"gorm.io/gorm"
 	"os"

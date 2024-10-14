@@ -3,8 +3,8 @@ package job
 import (
 	"context"
 	"fmt"
-	"github.com/freegle/iznik-server-go/database"
-	"github.com/freegle/iznik-server-go/utils"
+	"github.com/freegle/booktastic-server-go/database"
+	"github.com/freegle/booktastic-server-go/utils"
 	"github.com/gofiber/fiber/v2"
 	geo "github.com/kellydunn/golang-geo"
 	"regexp"
