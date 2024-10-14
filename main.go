@@ -10,6 +10,7 @@ import (
 	"github.com/freegle/booktastic-server-go/router"
 	"github.com/freegle/booktastic-server-go/user"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/compress"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"os"
