@@ -1,22 +1,23 @@
 package router
 
 import (
-	"github.com/freegle/booktastic-server-go/address"
-	"github.com/freegle/booktastic-server-go/chat"
-	"github.com/freegle/booktastic-server-go/communityevent"
-	"github.com/freegle/booktastic-server-go/config"
-	"github.com/freegle/booktastic-server-go/group"
-	"github.com/freegle/booktastic-server-go/isochrone"
-	"github.com/freegle/booktastic-server-go/job"
-	"github.com/freegle/booktastic-server-go/location"
-	"github.com/freegle/booktastic-server-go/message"
-	"github.com/freegle/booktastic-server-go/misc"
-	"github.com/freegle/booktastic-server-go/newsfeed"
-	"github.com/freegle/booktastic-server-go/notification"
-	"github.com/freegle/booktastic-server-go/story"
-	"github.com/freegle/booktastic-server-go/user"
-	"github.com/freegle/booktastic-server-go/volunteering"
+	"booktastic-server-go/shelf"
 	"github.com/gofiber/fiber/v2"
+	"github.com/tasticbooktastic/booktastic-server-go/address"
+	"github.com/tasticbooktastic/booktastic-server-go/chat"
+	"github.com/tasticbooktastic/booktastic-server-go/communityevent"
+	"github.com/tasticbooktastic/booktastic-server-go/config"
+	"github.com/tasticbooktastic/booktastic-server-go/group"
+	"github.com/tasticbooktastic/booktastic-server-go/isochrone"
+	"github.com/tasticbooktastic/booktastic-server-go/job"
+	"github.com/tasticbooktastic/booktastic-server-go/location"
+	"github.com/tasticbooktastic/booktastic-server-go/message"
+	"github.com/tasticbooktastic/booktastic-server-go/misc"
+	"github.com/tasticbooktastic/booktastic-server-go/newsfeed"
+	"github.com/tasticbooktastic/booktastic-server-go/notification"
+	"github.com/tasticbooktastic/booktastic-server-go/story"
+	"github.com/tasticbooktastic/booktastic-server-go/user"
+	"github.com/tasticbooktastic/booktastic-server-go/volunteering"
 )
 
 func SetupRoutes(app *fiber.App) {
@@ -59,6 +60,8 @@ func SetupRoutes(app *fiber.App) {
 		rg.Get("/notification/count", notification.Count)
 		rg.Get("/notification", notification.List)
 		rg.Get("/online", misc.Online)
+		rg.Get("/shelf/:id", shelf.Single)
+		rg.Put("/shelf", shelf.Create)
 		rg.Get("/story", story.List)
 		rg.Get("/story/:id", story.Single)
 		rg.Get("/story/group/:id", story.Group)

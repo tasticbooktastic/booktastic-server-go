@@ -2,8 +2,8 @@ package group
 
 import (
 	"encoding/json"
-	"github.com/freegle/booktastic-server-go/database"
-	"github.com/freegle/booktastic-server-go/user"
+	"github.com/tasticbooktastic/booktastic-server-go/database"
+	"github.com/tasticbooktastic/booktastic-server-go/user"
 )
 
 type GroupVolunteer struct {

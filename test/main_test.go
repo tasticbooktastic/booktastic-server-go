@@ -1,10 +1,10 @@
 package test
 
 import (
-	"github.com/freegle/booktastic-server-go/database"
-	"github.com/freegle/booktastic-server-go/router"
-	"github.com/freegle/booktastic-server-go/user"
 	"github.com/gofiber/fiber/v2"
+	"github.com/tasticbooktastic/booktastic-server-go/database"
+	"github.com/tasticbooktastic/booktastic-server-go/router"
+	"github.com/tasticbooktastic/booktastic-server-go/user"
 )
 
 var app *fiber.App

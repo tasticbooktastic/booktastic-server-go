@@ -1,7 +1,7 @@
 package log
 
 import (
-	"github.com/freegle/booktastic-server-go/database"
+	"github.com/tasticbooktastic/booktastic-server-go/database"
 	"time"
 )
 

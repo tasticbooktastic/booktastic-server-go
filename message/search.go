@@ -1,7 +1,7 @@
 package message
 
 import (
-	"github.com/freegle/booktastic-server-go/utils"
+	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	"gorm.io/gorm"
 	"strconv"
 	"strings"

@@ -3,8 +3,8 @@ package group
 import (
 	"encoding/json"
 	"errors"
-	"github.com/freegle/booktastic-server-go/database"
 	"github.com/gofiber/fiber/v2"
+	"github.com/tasticbooktastic/booktastic-server-go/database"
 	"gorm.io/gorm"
 	"os"
 	"strconv"

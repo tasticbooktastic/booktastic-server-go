@@ -2,9 +2,9 @@ package test
 
 import (
 	json2 "encoding/json"
-	"github.com/freegle/booktastic-server-go/database"
-	"github.com/freegle/booktastic-server-go/message"
 	"github.com/stretchr/testify/assert"
+	"github.com/tasticbooktastic/booktastic-server-go/database"
+	"github.com/tasticbooktastic/booktastic-server-go/message"
 	"net/http/httptest"
 	"strconv"
 	"testing"

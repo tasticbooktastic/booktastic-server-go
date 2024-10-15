@@ -2,9 +2,9 @@ package story
 
 import (
 	"encoding/json"
-	"github.com/freegle/booktastic-server-go/database"
-	"github.com/freegle/booktastic-server-go/misc"
 	"github.com/gofiber/fiber/v2"
+	"github.com/tasticbooktastic/booktastic-server-go/database"
+	"github.com/tasticbooktastic/booktastic-server-go/misc"
 	"os"
 	"strconv"
 	"time"

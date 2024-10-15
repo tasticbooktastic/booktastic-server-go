@@ -3,10 +3,10 @@ package job
 import (
 	"context"
 	"fmt"
-	"github.com/freegle/booktastic-server-go/database"
-	"github.com/freegle/booktastic-server-go/utils"
 	"github.com/gofiber/fiber/v2"
 	geo "github.com/kellydunn/golang-geo"
+	"github.com/tasticbooktastic/booktastic-server-go/database"
+	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	"regexp"
 	"strconv"
 	"sync"

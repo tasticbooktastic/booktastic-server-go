@@ -3,10 +3,10 @@ package test
 import (
 	json2 "encoding/json"
 	"fmt"
-	"github.com/freegle/booktastic-server-go/group"
-	"github.com/freegle/booktastic-server-go/message"
-	user2 "github.com/freegle/booktastic-server-go/user"
 	"github.com/stretchr/testify/assert"
+	"github.com/tasticbooktastic/booktastic-server-go/group"
+	"github.com/tasticbooktastic/booktastic-server-go/message"
+	user2 "github.com/tasticbooktastic/booktastic-server-go/user"
 	"net/http/httptest"
 	"testing"
 )

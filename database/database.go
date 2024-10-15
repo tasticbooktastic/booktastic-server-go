@@ -2,8 +2,8 @@ package database
 
 import (
 	"fmt"
-	sentrylogpackage "github.com/freegle/booktastic-server-go/sentrylog"
 	sql "github.com/rocketlaunchr/mysql-go"
+	sentrylogpackage "github.com/tasticbooktastic/booktastic-server-go/sentrylog"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

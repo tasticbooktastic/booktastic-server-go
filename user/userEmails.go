@@ -1,8 +1,8 @@
 package user
 
 import (
-	"github.com/freegle/booktastic-server-go/database"
-	"github.com/freegle/booktastic-server-go/utils"
+	"github.com/tasticbooktastic/booktastic-server-go/database"
+	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	"time"
 )
 

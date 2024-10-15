@@ -2,8 +2,8 @@ package test
 
 import (
 	json2 "encoding/json"
-	"github.com/freegle/booktastic-server-go/config"
 	"github.com/stretchr/testify/assert"
+	"github.com/tasticbooktastic/booktastic-server-go/config"
 	"net/http/httptest"
 	"testing"
 )

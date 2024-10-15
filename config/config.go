@@ -1,8 +1,8 @@
 package config
 
 import (
-	"github.com/freegle/booktastic-server-go/database"
 	"github.com/gofiber/fiber/v2"
+	"github.com/tasticbooktastic/booktastic-server-go/database"
 )
 
 type ConfigItem struct {

@@ -1,18 +1,19 @@
 package main
 
 import (
+	"booktastic-server-go/database"
 	"context"
 	"errors"
 	"fmt"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	fiberadapter "github.com/awslabs/aws-lambda-go-api-proxy/fiber"
-	"github.com/freegle/booktastic-server-go/router"
-	"github.com/freegle/booktastic-server-go/user"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/compress"
 	"github.com/gofiber/fiber/v2/middleware/cors"
+	"github.com/tasticbooktastic/booktastic-server-go/router"
+	"github.com/tasticbooktastic/booktastic-server-go/user"
 	"os"
 	"os/signal"
 	"runtime"
@@ -62,9 +63,9 @@ func main() {
 		MaxAge: 86400,
 	}))
 
-	//TODO database.InitDatabase()
+	database.InitDatabase()
 
-	//app.Use(database.NewPingMiddleware(database.Config{}))
+	app.Use(database.NewPingMiddleware(database.Config{}))
 
 	router.SetupRoutes(app)
 

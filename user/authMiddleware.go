@@ -2,9 +2,9 @@ package user
 
 import (
 	"fmt"
-	"github.com/freegle/booktastic-server-go/database"
 	"github.com/getsentry/sentry-go"
 	"github.com/gofiber/fiber/v2"
+	"github.com/tasticbooktastic/booktastic-server-go/database"
 	"sync"
 	"time"
 )
