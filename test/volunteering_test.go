@@ -1,11 +1,11 @@
 package test
 
 import (
+	"booktastic-server-go/database"
+	volunteering2 "booktastic-server-go/volunteering"
 	json2 "encoding/json"
 	"fmt"
 	"github.com/stretchr/testify/assert"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	volunteering2 "github.com/tasticbooktastic/booktastic-server-go/volunteering"
 	"net/http/httptest"
 	"testing"
 )

@@ -1,10 +1,10 @@
 package test
 
 import (
+	"booktastic-server-go/isochrone"
+	"booktastic-server-go/message"
 	json2 "encoding/json"
 	"github.com/stretchr/testify/assert"
-	"github.com/tasticbooktastic/booktastic-server-go/isochrone"
-	"github.com/tasticbooktastic/booktastic-server-go/message"
 	"net/http/httptest"
 	"testing"
 )

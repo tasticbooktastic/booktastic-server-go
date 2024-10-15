@@ -1,9 +1,9 @@
 package test
 
 import (
+	newsfeed2 "booktastic-server-go/newsfeed"
 	json2 "encoding/json"
 	"github.com/stretchr/testify/assert"
-	newsfeed2 "github.com/tasticbooktastic/booktastic-server-go/newsfeed"
 	"net/http/httptest"
 	"strconv"
 	"testing"

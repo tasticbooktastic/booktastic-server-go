@@ -1,9 +1,9 @@
 package address
 
 import (
+	"booktastic-server-go/database"
+	"booktastic-server-go/user"
 	"github.com/gofiber/fiber/v2"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	"github.com/tasticbooktastic/booktastic-server-go/user"
 	"strconv"
 )
 

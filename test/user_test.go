@@ -1,9 +1,9 @@
 package test
 
 import (
+	"booktastic-server-go/database"
 	"fmt"
 	"github.com/stretchr/testify/assert"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
 	"net/http/httptest"
 	"testing"
 )

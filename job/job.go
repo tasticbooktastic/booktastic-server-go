@@ -1,12 +1,12 @@
 package job
 
 import (
+	"booktastic-server-go/database"
+	"booktastic-server-go/utils"
 	"context"
 	"fmt"
 	"github.com/gofiber/fiber/v2"
 	geo "github.com/kellydunn/golang-geo"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	"regexp"
 	"strconv"
 	"sync"

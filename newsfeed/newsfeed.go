@@ -1,15 +1,15 @@
 package newsfeed
 
 import (
+	"booktastic-server-go/database"
+	"booktastic-server-go/misc"
+	"booktastic-server-go/user"
+	"booktastic-server-go/utils"
 	"context"
 	"encoding/json"
 	"fmt"
 	"github.com/gofiber/fiber/v2"
 	geo "github.com/kellydunn/golang-geo"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	"github.com/tasticbooktastic/booktastic-server-go/misc"
-	"github.com/tasticbooktastic/booktastic-server-go/user"
-	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	xurls "mvdan.cc/xurls/v2"
 	"os"
 	"sort"

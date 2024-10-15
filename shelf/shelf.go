@@ -1,11 +1,11 @@
 package shelf
 
 import (
+	"booktastic-server-go/database"
 	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/gofiber/fiber/v2"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
 	"gorm.io/gorm"
 	"strconv"
 	"sync"
@@ -18,7 +18,7 @@ func (Shelf) TableName() string {
 type Shelf struct {
 	ID           uint64          `json:"id"`
 	Externaluid  string          `json:"externaluid"`
-	Ouruid       string          `json:"ouruid"`
+	Ouruid       string          `json:"ouruid" gorm:"-"`
 	Externalmods json.RawMessage `json:"externalmods"`
 	Processed    bool            `json:"processed"`
 }
@@ -31,7 +31,8 @@ func Single(c *fiber.Ctx) error {
 	id, err := strconv.ParseUint(c.Params("id"), 10, 64)
 
 	if err == nil {
-		db := database.DBConn
+		db := database.GetDB()
+		fmt.Printf("Got DB", db)
 
 		wg.Add(1)
 
@@ -60,15 +61,13 @@ func Create(c *fiber.Ctx) error {
 		return fiber.NewError(fiber.StatusBadRequest, "Invalid JSON")
 	}
 
-	db := database.DBConn
-
-	fmt.Printf("Creating shelf %+v\n", shelf)
+	db := database.GetDB()
 
 	wg.Add(1)
 
 	go func() {
 		defer wg.Done()
-		db.Debug().Create(&shelf)
+		db.Create(&shelf)
 	}()
 
 	wg.Wait()

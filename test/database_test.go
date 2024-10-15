@@ -1,7 +1,7 @@
 package test
 
 import (
-	"github.com/tasticbooktastic/booktastic-server-go/database"
+	"booktastic-server-go/database"
 	"os"
 	"testing"
 )

@@ -1,13 +1,13 @@
 package user
 
 import (
+	"booktastic-server-go/database"
+	"booktastic-server-go/location"
+	log2 "booktastic-server-go/log"
+	"booktastic-server-go/utils"
 	"encoding/json"
 	"errors"
 	"github.com/gofiber/fiber/v2"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	"github.com/tasticbooktastic/booktastic-server-go/location"
-	log2 "github.com/tasticbooktastic/booktastic-server-go/log"
-	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	"gorm.io/gorm"
 	"strconv"
 	"sync"

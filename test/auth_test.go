@@ -1,11 +1,11 @@
 package test
 
 import (
+	"booktastic-server-go/database"
+	user2 "booktastic-server-go/user"
 	json2 "encoding/json"
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/stretchr/testify/assert"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	user2 "github.com/tasticbooktastic/booktastic-server-go/user"
 	"net/http/httptest"
 	"os"
 	"strconv"

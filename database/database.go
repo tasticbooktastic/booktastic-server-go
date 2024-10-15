@@ -1,9 +1,9 @@
 package database
 
 import (
+	sentrylogpackage "booktastic-server-go/sentrylog"
 	"fmt"
 	sql "github.com/rocketlaunchr/mysql-go"
-	sentrylogpackage "github.com/tasticbooktastic/booktastic-server-go/sentrylog"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -60,4 +60,9 @@ func InitDatabase() {
 	dbConfig, _ := DBConn.DB()
 	dbConfig.SetMaxIdleConns(1000)
 	dbConfig.SetConnMaxLifetime(time.Hour)
+}
+
+func GetDB() *gorm.DB {
+	fmt.Println("Return database", DBConn)
+	return DBConn
 }

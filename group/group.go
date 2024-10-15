@@ -1,10 +1,10 @@
 package group
 
 import (
+	"booktastic-server-go/database"
 	"encoding/json"
 	"errors"
 	"github.com/gofiber/fiber/v2"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
 	"gorm.io/gorm"
 	"os"
 	"strconv"

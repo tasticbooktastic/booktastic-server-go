@@ -1,15 +1,15 @@
 package test
 
 import (
+	"booktastic-server-go/database"
+	"booktastic-server-go/group"
+	"booktastic-server-go/message"
+	user2 "booktastic-server-go/user"
+	"booktastic-server-go/utils"
 	json2 "encoding/json"
 	"fmt"
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/stretchr/testify/assert"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	"github.com/tasticbooktastic/booktastic-server-go/group"
-	"github.com/tasticbooktastic/booktastic-server-go/message"
-	user2 "github.com/tasticbooktastic/booktastic-server-go/user"
-	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	"io"
 	"net/http"
 	"net/http/httptest"

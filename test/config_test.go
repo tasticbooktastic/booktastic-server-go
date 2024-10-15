@@ -1,9 +1,9 @@
 package test
 
 import (
+	"booktastic-server-go/config"
 	json2 "encoding/json"
 	"github.com/stretchr/testify/assert"
-	"github.com/tasticbooktastic/booktastic-server-go/config"
 	"net/http/httptest"
 	"testing"
 )

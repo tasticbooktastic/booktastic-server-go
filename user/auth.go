@@ -1,13 +1,13 @@
 package user
 
 import (
+	"booktastic-server-go/database"
 	"booktastic-server-go/location"
 	json2 "encoding/json"
 	"errors"
 	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
 	"os"
 	"strconv"
 	"strings"

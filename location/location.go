@@ -1,10 +1,10 @@
 package location
 
 import (
+	"booktastic-server-go/database"
+	"booktastic-server-go/utils"
 	"github.com/gofiber/fiber/v2"
 	geo "github.com/kellydunn/golang-geo"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	"math"
 	"strconv"
 	"sync"

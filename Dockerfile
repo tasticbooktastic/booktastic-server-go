@@ -12,7 +12,7 @@ ENV MYSQL_USER=root \
     GROUP_DOMAIN=groups.freegle.test
 
 RUN apt update && apt install -y golang-go git \
-    && git clone https://github.com/tasticbooktastic/booktastic-server-go.git
+    && git clone https://booktastic-server-go.git
 
 CMD cd booktastic-server-go \
   && git pull \

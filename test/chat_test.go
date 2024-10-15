@@ -1,12 +1,12 @@
 package test
 
 import (
+	"booktastic-server-go/chat"
 	"bytes"
 	json2 "encoding/json"
 	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"github.com/stretchr/testify/assert"
-	"github.com/tasticbooktastic/booktastic-server-go/chat"
 	"net/http/httptest"
 	url2 "net/url"
 	"os"

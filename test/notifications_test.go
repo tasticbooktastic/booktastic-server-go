@@ -1,9 +1,9 @@
 package test
 
 import (
+	"booktastic-server-go/notification"
 	json2 "encoding/json"
 	"github.com/stretchr/testify/assert"
-	"github.com/tasticbooktastic/booktastic-server-go/notification"
 	"net/http/httptest"
 	"testing"
 )

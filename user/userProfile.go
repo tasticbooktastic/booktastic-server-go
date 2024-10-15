@@ -1,8 +1,8 @@
 package user
 
 import (
+	"booktastic-server-go/misc"
 	"encoding/json"
-	"github.com/tasticbooktastic/booktastic-server-go/misc"
 	"os"
 	"strconv"
 	"strings"

@@ -2,6 +2,8 @@ package main
 
 import (
 	"booktastic-server-go/database"
+	"booktastic-server-go/router"
+	"booktastic-server-go/user"
 	"context"
 	"errors"
 	"fmt"
@@ -12,8 +14,6 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/compress"
 	"github.com/gofiber/fiber/v2/middleware/cors"
-	"github.com/tasticbooktastic/booktastic-server-go/router"
-	"github.com/tasticbooktastic/booktastic-server-go/user"
 	"os"
 	"os/signal"
 	"runtime"

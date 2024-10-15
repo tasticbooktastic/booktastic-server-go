@@ -1,10 +1,10 @@
 package test
 
 import (
+	"booktastic-server-go/group"
 	json2 "encoding/json"
 	"fmt"
 	"github.com/stretchr/testify/assert"
-	"github.com/tasticbooktastic/booktastic-server-go/group"
 	"net/http/httptest"
 	"testing"
 )

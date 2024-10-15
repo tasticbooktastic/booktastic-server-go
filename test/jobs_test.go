@@ -1,10 +1,10 @@
 package test
 
 import (
+	"booktastic-server-go/job"
 	json2 "encoding/json"
 	"fmt"
 	"github.com/stretchr/testify/assert"
-	"github.com/tasticbooktastic/booktastic-server-go/job"
 	"net/http/httptest"
 	"testing"
 )

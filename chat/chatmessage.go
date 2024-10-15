@@ -1,13 +1,13 @@
 package chat
 
 import (
+	"booktastic-server-go/database"
+	"booktastic-server-go/misc"
+	"booktastic-server-go/user"
+	"booktastic-server-go/utils"
 	"encoding/json"
 	"fmt"
 	"github.com/gofiber/fiber/v2"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	"github.com/tasticbooktastic/booktastic-server-go/misc"
-	"github.com/tasticbooktastic/booktastic-server-go/user"
-	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	"os"
 	"strconv"
 	"time"

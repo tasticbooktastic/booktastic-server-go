@@ -1,10 +1,10 @@
 package notification
 
 import (
+	"booktastic-server-go/database"
+	"booktastic-server-go/user"
+	"booktastic-server-go/utils"
 	"github.com/gofiber/fiber/v2"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	"github.com/tasticbooktastic/booktastic-server-go/user"
-	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	"time"
 )
 

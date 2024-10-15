@@ -1,8 +1,8 @@
 package test
 
 import (
+	"booktastic-server-go/utils"
 	"github.com/stretchr/testify/assert"
-	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	"testing"
 )
 

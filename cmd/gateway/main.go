@@ -1,12 +1,12 @@
 package main
 
 import (
+	"booktastic-server-go/adapter"
+	"booktastic-server-go/handler"
 	"context"
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/gofiber/fiber/v2"
-	"github.com/tasticbooktastic/booktastic-server-go/adapter"
-	"github.com/tasticbooktastic/booktastic-server-go/handler"
 	"time"
 )
 

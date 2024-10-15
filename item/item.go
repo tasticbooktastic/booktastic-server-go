@@ -1,6 +1,6 @@
 package item
 
-import "github.com/tasticbooktastic/booktastic-server-go/database"
+import "booktastic-server-go/database"
 
 type Item struct {
 	ID   uint64 `json:"id" gorm:"primary_key"`

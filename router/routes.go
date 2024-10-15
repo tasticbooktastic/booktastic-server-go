@@ -1,23 +1,19 @@
 package router
 
 import (
+	"booktastic-server-go/address"
+	"booktastic-server-go/chat"
+	"booktastic-server-go/config"
+	"booktastic-server-go/group"
+	"booktastic-server-go/isochrone"
+	"booktastic-server-go/job"
+	"booktastic-server-go/location"
+	"booktastic-server-go/message"
+	"booktastic-server-go/misc"
+	"booktastic-server-go/notification"
 	"booktastic-server-go/shelf"
+	"booktastic-server-go/user"
 	"github.com/gofiber/fiber/v2"
-	"github.com/tasticbooktastic/booktastic-server-go/address"
-	"github.com/tasticbooktastic/booktastic-server-go/chat"
-	"github.com/tasticbooktastic/booktastic-server-go/communityevent"
-	"github.com/tasticbooktastic/booktastic-server-go/config"
-	"github.com/tasticbooktastic/booktastic-server-go/group"
-	"github.com/tasticbooktastic/booktastic-server-go/isochrone"
-	"github.com/tasticbooktastic/booktastic-server-go/job"
-	"github.com/tasticbooktastic/booktastic-server-go/location"
-	"github.com/tasticbooktastic/booktastic-server-go/message"
-	"github.com/tasticbooktastic/booktastic-server-go/misc"
-	"github.com/tasticbooktastic/booktastic-server-go/newsfeed"
-	"github.com/tasticbooktastic/booktastic-server-go/notification"
-	"github.com/tasticbooktastic/booktastic-server-go/story"
-	"github.com/tasticbooktastic/booktastic-server-go/user"
-	"github.com/tasticbooktastic/booktastic-server-go/volunteering"
 )
 
 func SetupRoutes(app *fiber.App) {
@@ -31,11 +27,7 @@ func SetupRoutes(app *fiber.App) {
 		rg.Get("/chat", chat.ListForUser)
 		rg.Get("/chat/:id/message", chat.GetChatMessages)
 		rg.Post("/chat/:id/message", chat.CreateChatMessage)
-		rg.Post("/chat/lovejunk", chat.CreateChatMessageLoveJunk)
 		rg.Get("/chat/:id", chat.GetChat)
-		rg.Get("/communityevent", communityevent.List)
-		rg.Get("/communityevent/group/:id", communityevent.ListGroup)
-		rg.Get("/communityevent/:id", communityevent.Single)
 		rg.Get("/config/:key", config.Get)
 		rg.Get("/group", group.ListGroups)
 		rg.Get("/group/:id", group.GetGroup)
@@ -45,28 +37,14 @@ func SetupRoutes(app *fiber.App) {
 		rg.Get("/job", job.GetJobs)
 		rg.Get("/job/:id", job.GetJob)
 		rg.Get("/location/:id", location.GetLocation)
-		rg.Get("/message/count", isochrone.Count)
-		rg.Get("/message/inbounds", message.Bounds)
-		rg.Get("/message/mygroups/:id?", message.Groups)
-		rg.Get("/message/search/:term", message.Search)
-		rg.Get("/message/:ids", message.GetMessages)
 		rg.Get("/user/:id?", user.GetUser)
 		rg.Get("/user/:id/publiclocation", user.GetPublicLocation)
 		rg.Get("/user/:id/message", message.GetMessagesForUser)
 		rg.Get("/user/:id/search", user.GetSearchesForUser)
-		rg.Get("/newsfeed/:id", newsfeed.Single)
-		rg.Get("/newsfeedcount", newsfeed.Count)
-		rg.Get("/newsfeed", newsfeed.Feed)
 		rg.Get("/notification/count", notification.Count)
 		rg.Get("/notification", notification.List)
 		rg.Get("/online", misc.Online)
 		rg.Get("/shelf/:id", shelf.Single)
 		rg.Put("/shelf", shelf.Create)
-		rg.Get("/story", story.List)
-		rg.Get("/story/:id", story.Single)
-		rg.Get("/story/group/:id", story.Group)
-		rg.Get("/volunteering", volunteering.List)
-		rg.Get("/volunteering/group/:id", volunteering.ListGroup)
-		rg.Get("/volunteering/:id", volunteering.Single)
 	}
 }

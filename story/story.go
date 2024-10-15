@@ -1,10 +1,10 @@
 package story
 
 import (
+	"booktastic-server-go/database"
+	"booktastic-server-go/misc"
 	"encoding/json"
 	"github.com/gofiber/fiber/v2"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	"github.com/tasticbooktastic/booktastic-server-go/misc"
 	"os"
 	"strconv"
 	"time"

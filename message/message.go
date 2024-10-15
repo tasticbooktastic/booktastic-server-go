@@ -1,16 +1,16 @@
 package message
 
 import (
+	"booktastic-server-go/database"
+	"booktastic-server-go/group"
+	"booktastic-server-go/item"
+	"booktastic-server-go/location"
+	"booktastic-server-go/misc"
+	"booktastic-server-go/user"
+	"booktastic-server-go/utils"
 	"encoding/json"
 	"errors"
 	"github.com/gofiber/fiber/v2"
-	"github.com/tasticbooktastic/booktastic-server-go/database"
-	"github.com/tasticbooktastic/booktastic-server-go/group"
-	"github.com/tasticbooktastic/booktastic-server-go/item"
-	"github.com/tasticbooktastic/booktastic-server-go/location"
-	"github.com/tasticbooktastic/booktastic-server-go/misc"
-	"github.com/tasticbooktastic/booktastic-server-go/user"
-	"github.com/tasticbooktastic/booktastic-server-go/utils"
 	"gorm.io/gorm"
 	"net/url"
 	"os"
