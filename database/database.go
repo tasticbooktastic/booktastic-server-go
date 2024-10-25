@@ -63,6 +63,5 @@ func InitDatabase() {
 }
 
 func GetDB() *gorm.DB {
-	fmt.Println("Return database", DBConn)
 	return DBConn
 }

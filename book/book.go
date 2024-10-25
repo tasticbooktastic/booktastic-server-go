@@ -6,5 +6,5 @@ type Book struct {
 	ID      uint64          `json:"id"`
 	Title   string          `json:"title"`
 	Isbn13  string          `json:"isbn13"`
-	Authors []author.Author `json:"authors"`
+	Authors []author.Author `json:"authors" gorm:"-"`
 }

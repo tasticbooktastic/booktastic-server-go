@@ -6,7 +6,6 @@ import (
 	"booktastic-server-go/database"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"gorm.io/gorm"
 	"strconv"
@@ -22,7 +21,6 @@ type Shelf struct {
 }
 
 func Create(c *fiber.Ctx) error {
-	var wg sync.WaitGroup
 	var shelf Shelf
 
 	err := json.Unmarshal(c.Body(), &shelf)
@@ -31,15 +29,7 @@ func Create(c *fiber.Ctx) error {
 	}
 
 	db := database.GetDB()
-
-	wg.Add(1)
-
-	go func() {
-		defer wg.Done()
-		db.Create(&shelf)
-	}()
-
-	wg.Wait()
+	db.Create(&shelf)
 
 	if shelf.ID > 0 {
 		return c.JSON(shelf)
@@ -49,7 +39,6 @@ func Create(c *fiber.Ctx) error {
 }
 
 func Single(c *fiber.Ctx) error {
-	var wg sync.WaitGroup
 	var shelf Shelf
 	var found bool
 
@@ -57,17 +46,9 @@ func Single(c *fiber.Ctx) error {
 
 	if err == nil {
 		db := database.GetDB()
-		fmt.Printf("Got DB", db)
 
-		wg.Add(1)
-
-		go func() {
-			defer wg.Done()
-			err := db.Where("id = ?", id).First(&shelf).Error
-			found = !errors.Is(err, gorm.ErrRecordNotFound)
-		}()
-
-		wg.Wait()
+		err := db.Where("id = ?", id).First(&shelf).Error
+		found = !errors.Is(err, gorm.ErrRecordNotFound)
 
 		if found {
 			return c.JSON(shelf)
@@ -87,7 +68,9 @@ func Books(c *fiber.Ctx) error {
 	if err == nil {
 		db := database.GetDB()
 
-		db.Raw("SELECT books.* FROM `books` INNER JOIN shelves_books ON shelves_books.bookid = books.id WHERE shelfid = ?;", id).Scan(&books)
+		db.Raw("SELECT books.id, title, isbn13 FROM `books` "+
+			"INNER JOIN shelves_books ON shelves_books.bookid = books.id "+
+			"WHERE shelfid = ?;", id).Scan(&books)
 
 		for i := range books {
 			wg.Add(1)
@@ -108,4 +91,36 @@ func Books(c *fiber.Ctx) error {
 	}
 
 	return c.JSON(books)
+}
+
+func Patch(c *fiber.Ctx) error {
+	var shelf Shelf
+	var found bool
+
+	id, err := strconv.ParseUint(c.Params("id"), 10, 64)
+
+	if err == nil {
+		db := database.GetDB()
+
+		err := db.Where("id = ?", id).First(&shelf).Error
+		found = !errors.Is(err, gorm.ErrRecordNotFound)
+
+		if found {
+			// We support updating the processed flag.
+			err = json.Unmarshal(c.Body(), &shelf)
+			if err != nil {
+				return fiber.NewError(fiber.StatusBadRequest, "Invalid JSON")
+			}
+
+			if !shelf.Processed {
+				db.Exec("DELETE FROM shelves_books WHERE shelfid = ?", id)
+			}
+
+			db.Exec("UPDATE shelves SET processed = ? WHERE id = ?", shelf.Processed, id)
+
+			return c.JSON(shelf)
+		}
+	}
+
+	return fiber.NewError(fiber.StatusNotFound, "Not found")
 }
