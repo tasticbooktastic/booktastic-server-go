@@ -13,7 +13,6 @@ require (
 	github.com/kellydunn/golang-geo v0.7.0
 	github.com/rocketlaunchr/mysql-go v1.1.3
 	github.com/stretchr/testify v1.9.0
-	booktastic-server-go v0.0.0-20240913084341-16eb75871cbb
 	github.com/tidwall/geodesic v0.3.5
 	github.com/valyala/fasthttp v1.55.0
 	gorm.io/driver/mysql v1.5.7

@@ -44,7 +44,8 @@ func SetupRoutes(app *fiber.App) {
 		rg.Get("/notification/count", notification.Count)
 		rg.Get("/notification", notification.List)
 		rg.Get("/online", misc.Online)
-		rg.Get("/shelf/:id", shelf.Single)
 		rg.Put("/shelf", shelf.Create)
+		rg.Get("/shelf/:id", shelf.Single)
+		rg.Get("/shelf/:id/books", shelf.Books)
 	}
 }
