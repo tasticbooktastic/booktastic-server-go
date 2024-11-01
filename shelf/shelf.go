@@ -18,6 +18,7 @@ type Shelf struct {
 	Ouruid       string          `json:"ouruid" gorm:"-"`
 	Externalmods json.RawMessage `json:"externalmods"`
 	Processed    bool            `json:"processed"`
+	Rating       string          `json:"rating"`
 }
 
 func Create(c *fiber.Ctx) error {
@@ -106,7 +107,7 @@ func Patch(c *fiber.Ctx) error {
 		found = !errors.Is(err, gorm.ErrRecordNotFound)
 
 		if found {
-			// We support updating the processed flag.
+			// We support updating the processed flag and the rating.
 			err = json.Unmarshal(c.Body(), &shelf)
 			if err != nil {
 				return fiber.NewError(fiber.StatusBadRequest, "Invalid JSON")
@@ -117,6 +118,10 @@ func Patch(c *fiber.Ctx) error {
 			}
 
 			db.Exec("UPDATE shelves SET processed = ? WHERE id = ?", shelf.Processed, id)
+
+			if shelf.Rating != "" {
+				db.Exec("UPDATE shelves SET rating = ? WHERE id = ?", shelf.Rating, id)
+			}
 
 			return c.JSON(shelf)
 		}
