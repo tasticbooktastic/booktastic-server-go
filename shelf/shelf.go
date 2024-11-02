@@ -19,6 +19,7 @@ type Shelf struct {
 	Externalmods json.RawMessage `json:"externalmods"`
 	Processed    bool            `json:"processed"`
 	Rating       string          `json:"rating"`
+	Created      string          `json:"created" gorm:"autoCreateTime"`
 }
 
 func Create(c *fiber.Ctx) error {
@@ -37,6 +38,15 @@ func Create(c *fiber.Ctx) error {
 	}
 
 	return fiber.NewError(fiber.StatusInternalServerError, "Failed to create")
+}
+
+func List(c *fiber.Ctx) error {
+	var shelves []Shelf
+
+	db := database.GetDB()
+	db.Find(&shelves)
+
+	return c.JSON(shelves)
 }
 
 func Single(c *fiber.Ctx) error {
