@@ -19,7 +19,7 @@ type Shelf struct {
 	Externalmods json.RawMessage `json:"externalmods"`
 	Processed    bool            `json:"processed"`
 	Rating       string          `json:"rating"`
-	Created      string          `json:"created" gorm:"-"`
+	Created      string          `json:"created" gorm:"<-:false"`
 }
 
 func Create(c *fiber.Ctx) error {
