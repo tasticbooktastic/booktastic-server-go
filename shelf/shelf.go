@@ -89,11 +89,11 @@ func Books(c *fiber.Ctx) error {
 			go func(i int) {
 				defer wg.Done()
 
-				var author author2.Author
-				db.Raw("SELECT authors.* FROM `authors` INNER JOIN books_authors ON books_authors.authorid = authors.id WHERE bookid = ?;", books[i].ID).Scan(&author)
+				var authors []author2.Author
+				db.Raw("SELECT authors.* FROM `authors` INNER JOIN books_authors ON books_authors.authorid = authors.id WHERE bookid = ?;", books[i].ID).Scan(&authors)
 
 				mu.Lock()
-				books[i].Authors = append(books[i].Authors, author)
+				books[i].Authors = authors
 				mu.Unlock()
 			}(i)
 		}
